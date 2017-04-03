@@ -1,0 +1,9 @@
+<form method="post" action="/signin">
+  <% if session[:message] %>
+    <p class="message"><%= session.delete(:message) %></p>
+  <% end %>
+  <label for="username"><input type="text" id="login" name="username" placeholder="Username" required></label>
+  <label for="password"><input type="password" id="password" name="password" placeholder="Password" required></label>
+  <input type="submit" value="Login">
+  <p>Not registered? <a href="/signup">Create an account</a></p>
+</form>

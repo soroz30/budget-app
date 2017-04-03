@@ -1,0 +1,11 @@
+---
+admin:
+  :pass: "$2a$10$CQBSb4LgNFw4ocHHiCCW4.R/Dti5.7YVWE.sIu6Urn5GBrCVg5Rnm"
+  :first_name: admin
+  :last_name: admin
+  :email: admin@yahoo.com
+soroz30:
+  :pass: "$2a$10$NivyoO4fMGupOoK.P7J9Ue9FlbvuGUVlQ92t2V7Qf5Xc/eugdjVLm"
+  :first_name: Marek
+  :last_name: Koseski
+  :email: soroz30@yahoo.pl

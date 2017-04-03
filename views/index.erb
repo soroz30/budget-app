@@ -1,0 +1,33 @@
+<div class="container index">
+  <% if session[:message] %>
+    <p class="message"><%= session.delete(:message) %></p>
+  <% end %>
+  <h2>Current Balance</h2>
+  <p class="balance"><%= @balance %> $</p>
+  <% unless @last_transactions.empty? %>
+    <h3>Last Transactions</h3>
+    <div class="table-container index-table">
+      <table>
+        <tr>
+          <th>Kind</th>
+          <th>Date</th>
+          <th>Amount</th>
+          <th>Category</th>
+          <th>Comment</th>
+        </tr>
+      <% @last_transactions.each do |transaction| %>
+        <tr>
+          <td><%= transaction[:kind] %></td>
+          <td><%= transaction[:date] %></td>
+          <td><%= transaction[:amount] %></td>
+          <td><%= transaction[:category] %></td>
+          <td class="comment"><%= transaction[:comment] %></td>
+        </tr>
+      <% end %>
+      </table>
+    </div>
+  <% end %>
+  <a href="/new" class="button center">Add transaction</a><!--
+  --><a href="/history" class="button center">History</a>
+  <a href="/logout" class="button logout">Log Out</a>
+</div>
